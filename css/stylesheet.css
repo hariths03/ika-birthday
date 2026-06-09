@@ -33,8 +33,9 @@ body {
 
 /* Enlarged image */
 .lightbox img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 70%;
+  max-height: 80%;
+  transform: translateY(-50px);
   border-radius: 10px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.5);
   animation: fadeIn 0.3s ease;
@@ -49,9 +50,9 @@ body {
 .can-zoom {
   display: none;   /* hidden until button click */
   position: absolute;
-  right: 65px;     /* aligns with right album photos */
-  top: 360px;      /* sits below the second right photo */
-  width: 200px;
+   right: 180px;
+  top: 280px;
+  width: 150px;
   height: auto;
   opacity: 0.9;
   transition: opacity 0.3s ease;

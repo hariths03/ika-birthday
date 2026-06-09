@@ -7,7 +7,7 @@
 <head>
 	<title>Happy Birthday</title>
 	<meta charset="UTF-8" />
-	<meta name="description" content="Happy Birthday Anggie">
+	<meta name="description" content="Happy Birthday My Ika">
 	<meta name="robots" content="index, follow" />
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 	<link rel="author" href="alex" /> 
@@ -266,12 +266,12 @@
 .album-photo {
   display: none;
   position: absolute;
-  width: 300px; /* looks like landscape photo */
-  height: auto;
+  width: 220px;
+  height: 300px;
+  object-fit: cover;
   border: 5px solid white;
   box-shadow: 0 6px 18px rgba(0,0,0,0.3);
   border-radius: 10px;
-  transition: transform 0.3s ease;
 }
 
 .album-photo:hover {
@@ -279,15 +279,29 @@
   z-index: 10;
 }
 
-/* Left side */
-.album-left-1 { top: 30px; left: 50px; transform: rotate(-5deg); }
-.album-left-2 { top: 205px; left: 70px; transform: rotate(4deg); }
+.album-left-1 {
+  top: 50px;
+  left: 20px;
+  transform: rotate(-5deg);
+}
 
-/* Right side */
-.album-right-1 { top: 30px; right: 50px; transform: rotate(5deg); }
-.album-right-2 { top: 205px; right: 70px; transform: rotate(-4deg); }
+.album-left-2 {
+  top: 380px;
+  left: 40px;
+  transform: rotate(4deg);
+}
 
+.album-right-1 {
+  top: 50px;
+  right: 20px;
+  transform: rotate(5deg);
+}
 
+.album-right-2 {
+  top: 380px;
+  right: 40px;
+  transform: rotate(-4deg);
+}
 /* ============================================== TEXT
 */
 h1,
