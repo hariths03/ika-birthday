@@ -279,6 +279,27 @@
   z-index: 10;
 }
 
+.album-video {
+  display: none;
+
+  position: absolute;
+
+  top: 380px;
+  right: 300px;
+
+  width: 220px;
+  height: 300px;
+
+  object-fit: cover;
+
+  border: 5px solid white;
+  border-radius: 10px;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+
+  transform: rotate(3deg);
+}
+
 .album-left-1 {
   top: 50px;
   left: 20px;
@@ -328,6 +349,8 @@ p {
   border-radius: 10px;
 }
 
+
+
 </style>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
 </head>
@@ -338,7 +361,9 @@ p {
   <img src="assets/images/photo2.jpg" class="album-photo album-left-2">
   <img src="assets/images/photo3.jpg" class="album-photo album-right-1">
   <img src="assets/images/photo4.jpg" class="album-photo album-right-2">
-
+  <video class="album-video" autoplay muted loop playsinline>
+    <source src="assets/videos/ika.mp4" type="video/mp4">
+  </video>
   <!-- Hint image -->
   <img src="assets/images/can-zoom.png" class="can-zoom">
 
@@ -417,6 +442,7 @@ p {
 				</div>
 			</div>
 		</div>
+</div>
 		<div class="row message">
 			<div class="col-md-12">
 				<p>Today is...</p>
@@ -445,6 +471,7 @@ p {
 				<p>a very happy birthday babyy ❤️</p>
 			</div>
 		</div>
+</div>
 		<div class="navbar navbar-fixed-bottom">
 			<div class="row">
 				<div class="col-md-6 text-center col-md-offset-3">
@@ -470,6 +497,7 @@ p {
 			<div class="col-md-2">
 			</div> -->
 		</div>
+    
 
 
 	</div>

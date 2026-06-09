@@ -52,6 +52,7 @@ $('document').ready(function(){
 
 		// Show the album photos
 		$('.album-photo').fadeIn('slow');
+		$('.album-video').fadeIn('slow');
 
 		$('.can-zoom').fadeIn('slow');
 
@@ -180,29 +181,37 @@ $('document').ready(function(){
 	});
 	
 	$('#story').click(function(){
-		$(this).fadeOut('slow');
-		$('.cake').fadeOut('fast').promise().done(function(){
-			$('.message').fadeIn('slow');
-		});
+    $(this).fadeOut('slow');
 
-		var $messages = $(".message p");   // only inside .message
-		var totalMessages = $messages.length;
+    $('.cake').fadeOut('fast').promise().done(function(){
+        $('.message').fadeIn('slow');
+    });
 
-		function msgLoop(i) {
-			if (i < totalMessages - 1) {
-				$messages.eq(i).fadeIn('slow').delay(1500).fadeOut('slow').promise().done(function(){
-					msgLoop(i + 1);
-				});
-			} else {
-				// Last message stays + cake comes back
-				$messages.eq(i).fadeIn('slow').promise().done(function(){
-					$('.cake').fadeIn('fast');
-				});
-			}
-		}
+    var $messages = $(".message p");
+    var totalMessages = $messages.length;
 
-		msgLoop(0);
-	});
+    function msgLoop(i) {
+        if (i < totalMessages - 1) {
+            $messages.eq(i)
+                .fadeIn('slow')
+                .delay(1500)
+                .fadeOut('slow')
+                .promise()
+                .done(function(){
+                    msgLoop(i + 1);
+                });
+        } else {
+            $messages.eq(i).fadeIn('slow').promise().done(function(){
+
+                $('.cake').fadeIn('fast');
+
+
+            });
+        }
+    }
+
+    msgLoop(0);
+});
 
 });
 
